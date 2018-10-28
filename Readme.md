@@ -1,6 +1,7 @@
 #Micro Php Framwork
 The kernel folder contains the framework fonctions :
-###Router
+
+### Router
 Load the route list from App/routes.php and try to match it to the current URL the class has two main static function **get** and **post** both of them has two argument the route with using :id or :val as url param and the second argument is the methode call (You need to define the full Namesapce\class::methode)
 
 ```
@@ -11,11 +12,11 @@ Example :
  
 ```
 Router::get('/etudiant','Admin\EtudiantController::index');
-    Router::get('/etudiant/ajouter','Admin\EtudiantController::ajouter');
-    
+Router::get('/etudiant/ajouter','Admin\EtudiantController::ajouter');
 ```
 
-###ORM
+### ORM
+
 A simple ORM class used for generic and simple SQL operation, like fetching all element with **Model::all()** , **Model::where('condition')** , **Model::get($id)** , **Model::save(['Name'=>'Paul','SecondName'=>'Taylor'])** 
 
 Your model needs to extend the ORM class
